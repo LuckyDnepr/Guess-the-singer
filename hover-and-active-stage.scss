@@ -1,0 +1,52 @@
+@mixin hover-and-active-borders() {
+  &:hover {
+    border: 2px solid #0fa;
+    box-shadow: 0 0 2px #fff,
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #0fa,
+    0 0 8px #0fa,
+    0 0 10px #0fa,
+    0 0 12px #0fa,
+    0 0 14px #0fa;
+  }
+  &:active {
+    border: 2px solid rgb(0, 102, 255);
+    box-shadow: 0 0 2px #fff,
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 8px rgb(0, 102, 255),
+    0 0 10px rgb(0, 102, 255),
+    0 0 12px rgb(0, 102, 255),
+    0 0 16px rgb(0, 102, 255),
+    0 0 20px rgb(0, 102, 255); 
+  }
+}
+
+@mixin hover-and-active-text() {
+  &:hover {
+  text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 8px #0fa,
+    0 0 10px #0fa,
+    0 0 12px #0fa,
+    0 0 16px #0fa,
+    0 0 20px #0fa; 
+  }
+  &:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 8px rgb(0, 102, 255),
+      0 0 10px rgb(0, 102, 255),
+      0 0 12px rgb(0, 102, 255),
+      0 0 16px rgb(0, 102, 255),
+      0 0 20px rgb(0, 102, 255); 
+  }
+}
+
