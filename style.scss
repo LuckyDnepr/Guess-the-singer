@@ -36,7 +36,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .nav {
@@ -80,11 +80,31 @@
   }
 }
 
+.main {
+  display: grid;
+  padding: 0 20px;
+  margin-top: 2rem;
+  height: 100%;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 4rem 16rem;
+  justify-items: center;
+  align-items: flex-start;
+  grid-template-areas:
+  "quizzstatus quizzstatus quizzstatus"
+  "selectanswer player artistinfo";
+}
+
+
 .quizz-status {
-  height: 6rem;
+  grid-area: quizzstatus;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   padding: 0 10px;
-  &__questions {
+  &__stage {
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -120,7 +140,7 @@
       0 0 10px rgb(0, 102, 255),
       0 0 12px rgb(0, 102, 255),
       0 0 16px rgb(0, 102, 255),
-      0 0 20px rgb(0, 102, 255); 
+      0 0 20px rgb(0, 102, 255);
     }
     .scores {
       cursor: context-menu;
@@ -134,17 +154,6 @@
   }
 }
 
-.main {
-  display: grid;
-  padding: 0 20px;
-  margin-top: 5rem;
-  height: 100%;
-  grid-template-columns: 25% auto 25%;
-  grid-template-rows: 16rem;
-  justify-items: center;
-  align-items: flex-start;
-  grid-template-areas: "selectanswer player artistinfo";
-}
 
 .select-answer {
   grid-area: selectanswer;
@@ -157,9 +166,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
+    justify-content: space-between;
     &__item {
       height: 2rem;
       display: flex;
+      font-size: 0.8rem;
       flex-direction: row;
       justify-content: center;
       align-items: center;
@@ -167,7 +179,6 @@
       margin: 5px 0;
       border: 2px solid rgba(255, 255, 255, 0.253);
       border-radius: 10px;
-      transition: all ease-in-out 300ms;
       @include hover-and-active-borders();
     }
     .fail {
@@ -204,23 +215,22 @@
   display: flex;
   flex-direction: column;
   &__info {
-    height: 70%;
+    height: calc(100% - 3rem);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     &__image {
       height: 100%;
-      width: 40%;
       display: flex;
       justify-content: center;
       align-items: center;
       & > img {
-        height: 100%;
+        height: 90%;
       }
     }
     &__text {
-      width: 60%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -241,10 +251,11 @@
   }
   &__controls {
     position: relative;
-    height: 30%;
+    height: 3rem;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+    padding-bottom: 0.4rem;
     &__play {
       height: 80%;
       border: 0;
@@ -285,8 +296,11 @@
       }
     }
     &__timeline {
-      position: absolute;
-      left: 45%;
+      width: 0;
+      position: relative;
+      right: 15%;
+      bottom: 18%;
+      user-select: none;
       -webkit-user-select: none;
       z-index: 1;
     }
@@ -323,7 +337,7 @@
         &__label {
           cursor: pointer;
           height: 2rem;
-          width: 4rem;
+          width: 2rem;
           position: relative;
           overflow: hidden;
           display: inline-block;

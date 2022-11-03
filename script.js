@@ -1,10 +1,27 @@
-const body = document.querySelector(".body"),
-play = document.querySelector(".player__controls__play");
+import { renderQuizzPage } from "./quizz-page.js";
 
-body.addEventListener("mousemove", function(e) {
-  body.style.setProperty('--x', -window.event.clientX/25 + "px");
+const main = document.querySelector(".main"),
+  body = document.querySelector(".body");
+
+const dataPath = "./data.json";
+
+quizzPageStart();
+
+body.addEventListener("mousemove", function (e) {
+  body.style.setProperty("--x", -window.event.clientX / 25 + "px");
 });
 
-play.addEventListener("click", (e) => {
-  e.target.classList.toggle("paused");
-});
+async function quizzPageStart () {
+  globalThis.data = await getData(dataPath);
+  renderQuizzPage(main);
+
+}
+
+async function getData(path) {
+  try {
+    const response = await fetch(path);
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+}

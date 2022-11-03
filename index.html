@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Trispace:wght@100;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
     <title>Check the artist</title>
   </head>
   <body class="body">
@@ -27,87 +27,12 @@
           </section>
         </nav>
       </header>
-      <section class="quizz-status">
-        <ul class="quizz-status__questions">
-          <li class="quizz-status__questions__item passed">Question 1</li>
-          <li class="quizz-status__questions__item passed">Question 2</li>
-          <li class="quizz-status__questions__item active">Question 3</li>
-          <li class="quizz-status__questions__item">Question 4</li>
-          <li class="quizz-status__questions__item">Question 5</li>
-          <li class="quizz-status__questions__item">Question 6</li>
-          <li class="quizz-status__questions__item scores">
-            Scores: <span class="scores-count">0</span>
-          </li>
-        </ul>
-      </section>
       <main class="main">
-        <aside class="select-answer">
-          <ul class="answer-selection">
-            <li class="answer-selection__item hit">Artist 1</li>
-            <li class="answer-selection__item fail">Artist 2</li>
-            <li class="answer-selection__item fail">Artist 3</li>
-            <li class="answer-selection__item">Artist 4</li>
-            <li class="answer-selection__item">Artist 5</li>
-            <li class="answer-selection__item">Artist 6</li>
-          </ul>
-        </aside>
-        <section class="player">
-          <section class="player__info">
-            <figure class="player__info__image">
-              <img src="./pics/unknown-person.png" alt="Unknown artist" />
-            </figure>
-            <section class="player__info__text">
-              <p class="player__info__text__name">Jack Dou</p>
-              <p class="player__info__text__years">1900-2000</p>
-              <p class="player__info__text__location">USA</p>
-            </section>
-          </section>
-          <section class="player__controls">
-            <button class="player__controls__play"></button>
-            <input
-              type="range"
-              class="player__controls__time"
-              id="timeline"
-              value="10"
-            />
-            <span class="player__controls__timeline">
-              00:00
-            </span>
-            <section class="volume__container">
-              <input
-                type="checkbox"
-                class="volume__container__mute"
-                id="mute"
-              />
-              <label for="mute" class="volume__container__mute__label"
-                ><span class="volume__container__mute__label__icon"></span
-              ></label>
-              <input
-                type="range"
-                class="volume__container__volume"
-                id="volume"
-                value="20"
-              />
-            </section>
-          </section>
-        </section>
-        <aside class="artist-info">
-          <section class="artist-info__main">
-            <figure class="artist-info__main__portrait">
-              <img src="./pics/unknown-person.png" alt="Artist portrait" />
-            </figure>
-            <section class="artist-info__main__article">
-              <p class="artist-info__main__article__name">Jack Dou</p>
-              <p class="artist-info__main__article__years">1900-2000</p>
-              <p class="artist-info__main__article__location">USA</p>
-              <p class="artist-info__main__article__link">
-                <a href="#">Link to infopage</a>
-              </p>
-            </section>
-          </section>
-        </aside>
+
       </main>
-      <footer class="footer">Footer</footer>
+      <footer class="footer">
+        Footer
+      </footer>
     </div>
   </body>
 </html>

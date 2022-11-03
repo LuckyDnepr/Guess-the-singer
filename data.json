@@ -1,0 +1,200 @@
+{
+  "stage1": [
+    {
+      "id": 1,
+      "artist": "Elvis Presley",
+      "song": "Love me tender",
+      "url": "./audio/01. The Celts.mp3"
+    },
+    {
+      "id": 2,
+      "artist": "Bill Haley",
+      "song": "Rock around the clock",
+      "url": "./audio/02. Aldebaran.mp3"
+    },
+    {
+      "id": 3,
+      "artist": "The Platters",
+      "song": "Only you",
+      "url": "./audio/03. I Want Tomorrow.mp3"
+    },
+    {
+      "id": 4,
+      "artist": "The Righteous Brothers",
+      "song": "Unchained melody",
+      "url": "./audio/04. March Of The Celts.mp3"
+    },
+    {
+      "id": 5,
+      "artist": "Chubby Checker",
+      "song": "The twist",
+      "url": "./audio/05. Deireadh An Tuath.mp3"
+    },
+    {
+      "id": 6,
+      "artist": "Roy Orbison",
+      "song": "Oh, pretty woman",
+      "url": "./audio/06. The Sun In The Stream.mp3"
+    }
+  ],
+  "stage2": [
+    {
+      "id": 1,
+      "artist": "Inner Circle",
+      "song": "Bad boys"
+    },
+    {
+      "id": 2,
+      "artist": "Max Romeo",
+      "song": "Chase the devil"
+    },
+    {
+      "id": 3,
+      "artist": "Bobby McFerrin",
+      "song": "Don't worry, be happy"
+    },
+    {
+      "id": 4,
+      "artist": "Laid Back",
+      "song": "Sunshine reggae"
+    },
+    {
+      "id": 5,
+      "artist": "UB40",
+      "song": "Kingston town"
+    },
+    {
+      "id": 6,
+      "artist": "Big Mountain",
+      "song": "Baby, I love your way"
+    }
+  ],
+  "stage3": [
+    {
+      "id": 1,
+      "artist": "A-Ha",
+      "song": "Stay on this road"
+    },
+    {
+      "id": 2,
+      "artist": "Alphaville",
+      "song": "Forever young"
+    },
+    {
+      "id": 3,
+      "artist": "Duran Duran",
+      "song": "Ordinary world"
+    },
+    {
+      "id": 4,
+      "artist": "Tears For Fears",
+      "song": "Shout"
+    },
+    {
+      "id": 5,
+      "artist": "Pet Shop Boys",
+      "song": "Domino dancing"
+    },
+    {
+      "id": 6,
+      "artist": "Depeche Mode",
+      "song": "Enjoy the Silence"
+    }
+  ],
+  "stage4": [
+    {
+      "id": 1,
+      "artist": "Sting",
+      "song": "Fields of gold"
+    },
+    {
+      "id": 2,
+      "artist": "Eric Clapton",
+      "song": "Tears in Heaven"
+    },
+    {
+      "id": 3,
+      "artist": "Phil Collins",
+      "song": "Can't Stop Loving You"
+    },
+    {
+      "id": 4,
+      "artist": "Toto",
+      "song": "Africa"
+    },
+    {
+      "id": 5,
+      "artist": "Peter Gabriel",
+      "song": "Red Rain"
+    },
+    {
+      "id": 6,
+      "artist": "Elton John",
+      "song": "Daniel"
+    }
+  ],
+  "stage5": [
+    {
+      "id": 1,
+      "artist": "Suzanne Vega",
+      "song": "Tom's dinner"
+    },
+    {
+      "id": 2,
+      "artist": "Vangelis",
+      "song": "Chariots of fire"
+    },
+    {
+      "id": 3,
+      "artist": "Sam Brown",
+      "song": "Stop"
+    },
+    {
+      "id": 4,
+      "artist": "Black",
+      "song": "Wonderful life"
+    },
+    {
+      "id": 5,
+      "artist": "Terence Trent D'Arby",
+      "song": "Red Rain"
+    },
+    {
+      "id": 6,
+      "artist": "Des'Ree",
+      "song": "Life"
+    }
+  ],
+  "stage6": [
+    {
+      "id": 1,
+      "artist": "Bolland & Bolland",
+      "song": "You in the army now"
+    },
+    {
+      "id": 2,
+      "artist": "The Shocking Blue",
+      "song": "Venus"
+    },
+    {
+      "id": 3,
+      "artist": "Arrows",
+      "song": "I love rock'n'roll"
+    },
+    {
+      "id": 4,
+      "artist": "Neil Diamond",
+      "song": "Girl, you'll be a woman soon"
+    },
+    {
+      "id": 5,
+      "artist": "Terence Trent D'Arby",
+      "song": "Red Rain"
+    },
+    {
+      "id": 6,
+      "artist": "Des'Ree",
+      "song": "Life"
+    }
+  ]
+}
