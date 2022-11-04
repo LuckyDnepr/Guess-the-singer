@@ -80,10 +80,10 @@
   margin-top: 2rem;
   height: 100%;
   grid-template-columns: 25% auto 25%;
-  grid-template-rows: 4rem 16rem;
+  grid-template-rows: 4rem 16rem 2rem;
   justify-items: center;
   align-items: flex-start;
-  grid-template-areas: "quizzstatus quizzstatus quizzstatus" "selectanswer player artistinfo"; }
+  grid-template-areas: "quizzstatus quizzstatus quizzstatus" "selectanswer player artistinfo" "nextstage nextstage nextstage"; }
 
 .quizz-status {
   grid-area: quizzstatus;
@@ -155,11 +155,15 @@
     .select-answer .answer-selection .fail {
       border: 2px solid #ff4800;
       box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #ff4800, 0 0 8px #ff4800, 0 0 10px #ff4800, 0 0 12px #ff4800, 0 0 14px #ff4800;
-      cursor: context-menu; }
+      /* cursor:context-menu; */ }
+      .select-answer .answer-selection .fail:hover {
+        text-decoration: underline; }
     .select-answer .answer-selection .hit {
       border: 2px solid #00c21a;
       box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #00c21a, 0 0 8px #00c21a, 0 0 10px #00c21a, 0 0 12px #00c21a, 0 0 14px #00c21a;
-      cursor: context-menu; }
+      /* cursor:context-menu; */ }
+      .select-answer .answer-selection .hit:hover {
+        text-decoration: underline; }
 
 .player {
   grid-area: player;
@@ -192,7 +196,7 @@
         font-size: 1.2rem; }
       .player__info__text__years {
         font-size: 1rem; }
-      .player__info__text__location {
+      .player__info__text__song {
         margin: 1rem 0;
         font-size: 1.2rem; }
   .player__controls {
@@ -333,6 +337,40 @@
       align-items: center; }
       .artist-info__main__article__link a {
         color: white;
-        text-decoration: none; }
+        text-decoration: underline; }
+
+.next-stage {
+  grid-area: nextstage;
+  width: 100%;
+  height: 100%;
+  padding: 0 3px;
+  margin-top: 1rem; }
+  .next-stage__button {
+    color: white;
+    font-family: Trispace, "Courier New", Courier, monospace;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 102, 255, 0.418);
+    border-radius: 10px;
+    background: none;
+    transition: all ease-in-out 100ms; }
+    .next-stage__button.pulsate {
+      cursor: pointer;
+      animation: pulsate 3s ease-in-out;
+      animation-iteration-count: infinite;
+      box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #0fa, 0 0 8px #0fa, 0 0 10px #0fa, 0 0 12px #0fa, 0 0 14px #0fa;
+      opacity: 1; }
+@keyframes pulsate {
+  0% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  50% {
+    opacity: 1.0; }
+  75% {
+    opacity: 0; }
+  100% {
+    opacity: 1.0; } }
 
 /*# sourceMappingURL=style.css.map */

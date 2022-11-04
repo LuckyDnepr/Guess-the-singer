@@ -86,12 +86,13 @@
   margin-top: 2rem;
   height: 100%;
   grid-template-columns: 25% auto 25%;
-  grid-template-rows: 4rem 16rem;
+  grid-template-rows: 4rem 16rem 2rem;
   justify-items: center;
   align-items: flex-start;
   grid-template-areas:
   "quizzstatus quizzstatus quizzstatus"
-  "selectanswer player artistinfo";
+  "selectanswer player artistinfo"
+  "nextstage nextstage nextstage";
 }
 
 
@@ -191,7 +192,10 @@
       0 0 10px rgb(255, 72, 0),
       0 0 12px rgb(255, 72, 0),
       0 0 14px rgb(255, 72, 0);
-      cursor:context-menu;
+      /* cursor:context-menu; */
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .hit {
       border: 2px solid rgb(0, 194, 26);
@@ -203,7 +207,10 @@
       0 0 10px rgb(0, 194, 26),
       0 0 12px rgb(0, 194, 26),
       0 0 14px rgb(0, 194, 26);
-      cursor:context-menu;
+      /* cursor:context-menu; */
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -243,7 +250,7 @@
       &__years {
         font-size: 1rem;
       }
-      &__location {
+      &__song {
         margin: 1rem 0;
         font-size: 1.2rem;
       }
@@ -411,10 +418,60 @@
       &__link {
         a {
           color: white;
-          text-decoration: none;
+          text-decoration: underline;
 
         }
       }
     }
+  }
+}
+
+.next-stage {
+  grid-area: nextstage;
+  width: 100%;
+  height: 100%;
+  padding: 0 3px;
+  margin-top: 1rem;
+  &__button {
+    color: white;
+    font-family: Trispace, "Courier New", Courier, monospace;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 102, 255, 0.418);
+    border-radius: 10px;
+    background: none;
+    transition: all ease-in-out 100ms;
+    &.pulsate {
+      cursor: pointer;
+      animation: pulsate 3s ease-in-out;
+      animation-iteration-count: infinite;
+      box-shadow: 0 0 2px #fff,
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #0fa,
+        0 0 8px #0fa,
+        0 0 10px #0fa,
+        0 0 12px #0fa,
+        0 0 14px #0fa;
+      opacity: 1;
+      }
+      @keyframes pulsate {
+          0% {
+              opacity: 1;
+          }
+          25% {
+              opacity: 0;
+          }
+          50% {
+              opacity: 1.0;
+          }
+          75% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1.0;
+          }
+      }
   }
 }

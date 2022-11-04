@@ -1,6 +1,7 @@
 export function renderQuizzPage(target) {
   globalThis.songs = generateSolver();
-  target.innerHTML = getQuizzPageHTML(globalThis.data.stage1);
+  globalThis.stage = 0;
+  target.innerHTML = getQuizzPageHTML(globalThis.data.stage0);
   addListeners();
 }
 
@@ -40,9 +41,9 @@ function getQuizzPageHTML(firstStage) {
                 <img src="./pics/unknown-person.png" alt="Unknown artist" />
               </figure>
               <section class="player__info__text">
-                <p class="player__info__text__name">Jack Dou</p>
-                <p class="player__info__text__years">1900-2000</p>
-                <p class="player__info__text__location">USA</p>
+                <p class="player__info__text__name">? ? ?</p>
+                <p class="player__info__text__years"> ? ? </p>
+                <p class="player__info__text__song">? ? ?</p>
               </section>
             </section>
             <section class="player__controls">
@@ -51,9 +52,9 @@ function getQuizzPageHTML(firstStage) {
                 type="range"
                 class="player__controls__time"
                 id="timeline"
-                value="10"
+                value="0"
               />
-              <span class="player__controls__timeline"> 00:00 </span>
+              <span class="player__controls__timeline">00:00</span>
               <section class="volume__container">
                 <input
                   type="checkbox"
@@ -78,29 +79,41 @@ function getQuizzPageHTML(firstStage) {
                 <img src="./pics/unknown-person.png" alt="Artist portrait" />
               </figure>
               <section class="artist-info__main__article">
-                <p class="artist-info__main__article__name">Jack Dou</p>
-                <p class="artist-info__main__article__years">1900-2000</p>
-                <p class="artist-info__main__article__location">USA</p>
+                <p class="artist-info__main__article__name">? ? ?</p>
+                <p class="artist-info__main__article__years"></p>
+                <p class="artist-info__main__article__location"></p>
                 <p class="artist-info__main__article__link">
-                  <a href="#">Link to infopage</a>
+                  <a href="#"></a>
                 </p>
               </section>
             </section>
           </aside>
+          <section class="next-stage">
+            <button class="next-stage__button">Next stage >>></button>
+          </section>
           <audio src="${globalThis.songs[0].url}" class="track"></audio>`;
 }
 
 function generateArtistListHTML(songs) {
-  const answers = songs.map(song => {
-    return `<li class="answer-selection__item">${song.artist}</li>`;
-  });
+  const answers = songs
+    .map(song => {
+      return `<li class="answer-selection__item" value="${song.id}">${song.artist}</li>`;
+    })
+    .sort(() => (Math.random() > 0.5) ? 1 : -1);
   return answers.join("");
 }
 
 function addListeners() {
-  const play = document.querySelector(".player__controls__play");
-  const music = document.querySelector(".track");
-  console.dir(music);
+  const play = document.querySelector(".player__controls__play"),
+  music = document.querySelector(".track"),
+  progress = document.querySelector(".player__controls__time"),
+  timeStamp = document.querySelector(".player__controls__timeline"),
+  mute = document.querySelector(".volume__container__mute"),
+  volumeChanger = document.querySelector(".volume__container__volume"),
+  answers = document.querySelector(".answer-selection"),
+  nextStageBtn = document.querySelector(".next-stage__button"),
+  artistInfo = document.querySelector(".artist-info");
+
   play.addEventListener("click", (e) => {
     if (e.target.classList.contains("paused")) {
       music.play();
@@ -110,8 +123,67 @@ function addListeners() {
     e.target.classList.toggle("paused");
   });
 
-  music.addEventListener("progress", (e) => {
-    console.log(music.currentTime);
+  mute.addEventListener("input", (e) => {
+    if (e.target.checked) {
+      music.muted = true;
+    } else {
+      music.muted = false;
+    }
+  });
+
+  volumeChanger.addEventListener("input", (e) => {
+    const newVolume = e.target.value / 100;
+    music.volume = newVolume;
+    console.log(newVolume);
+  });
+
+  music.addEventListener("timeupdate", (e) => {
+    const duration = music.duration,
+    currTime = e.target.currentTime,
+    value = 100 * currTime / duration,
+    min = Math.floor(currTime / 60),
+    sec = Math.floor(currTime - min * 60);
+    const visibleSec = sec < 10 ? `0${sec}` : sec;
+
+    progress.value = value;
+    timeStamp.innerHTML = `${min}:${visibleSec}`;
   }
   );
+
+  progress.addEventListener("input", (e) => {
+    const clickX = e.target.value;
+    const duration = music.duration;
+    music.currentTime = duration * clickX / 100;
+  });
+
+  answers.addEventListener("click", (e) => {
+    if (e.target.classList.contains("answer-selection__item")) {
+      if (e.target.value === globalThis.songs[globalThis.stage].id) {
+        e.target.classList.add("hit");
+        nextStageBtn.classList.add("pulsate");
+      } else {
+        if (document.querySelectorAll(".hit").length === 0) {
+          e.target.classList.add("fail");
+        }
+      }
+    }
+    renderArtistInfo(e.target.value, artistInfo);
+  });
+}
+
+function renderArtistInfo (id, target) {
+  const checkedSong = globalThis.data[`stage${globalThis.stage}`].find(song => song.id === id);
+      target.innerHTML = `<section class="artist-info__main">
+              <figure class="artist-info__main__portrait">
+                <img src="./pics/unknown-person.png" alt="Artist portrait" />
+              </figure>
+              <section class="artist-info__main__article">
+                <p class="artist-info__main__article__name">${checkedSong.artist}</p>
+                <p class="artist-info__main__article__years">${checkedSong.years}</p>
+                <p class="artist-info__main__article__location">${checkedSong.location}</p>
+                <p class="artist-info__main__article__link">
+                  <a href="${checkedSong.info}">More info...</a>
+                </p>
+              </section>
+            </section>`;
 }
