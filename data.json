@@ -4,37 +4,55 @@
       "id": 1,
       "artist": "Elvis Presley",
       "song": "Love me tender",
-      "url": "./audio/1.1.mp3"
+      "url": "./audio/01.mp3",
+      "years": "1935 – 1977",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Elvis_Presley"
     },
     {
       "id": 2,
       "artist": "Bill Haley",
       "song": "Rock around the clock",
-      "url": "./audio/1.2.mp3"
+      "url": "./audio/02.mp3",
+      "years": "1925 - 1981",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Bill_Haley"
     },
     {
       "id": 3,
       "artist": "The Platters",
       "song": "Only you",
-      "url": "./audio/1.3.mp3"
+      "url": "./audio/03.mp3",
+      "years": "1952 – present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/The_Platters"
     },
     {
       "id": 4,
       "artist": "The Righteous Brothers",
       "song": "Unchained melody",
-      "url": "./audio/1.4.mp3"
+      "url": "./audio/04.mp3",
+      "years": "1962 – present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/The_Righteous_Brothers"
     },
     {
       "id": 5,
       "artist": "Chubby Checker",
       "song": "Lets twist again",
-      "url": "./audio/1.5.mp3"
+      "url": "./audio/05.mp3",
+      "years": "1941 - present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Chubby_Checker"
     },
     {
       "id": 6,
       "artist": "Roy Orbison",
       "song": "Oh, pretty woman",
-      "url": "./audio/1.6.mp3"
+      "url": "./audio/06.mp3",
+      "years": "1936 - 1988",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Roy_Orbison"
     }
   ],
   "stage1": [
@@ -42,37 +60,55 @@
       "id": 1,
       "artist": "Inner Circle",
       "song": "Bad boys",
-      "url": "./audio/2.1.mp3"
+      "url": "./audio/07.mp3",
+      "years": "1968 - present",
+      "location": "Jamaica",
+      "info": "https://uk.wikipedia.org/wiki/Inner_Circle"
     },
     {
       "id": 2,
       "artist": "Max Romeo",
       "song": "Chase the devil",
-      "url": "./audio/2.2.mp3"
+      "url": "./audio/08.mp3",
+      "years": "1944 - present",
+      "location": "Jamaica",
+      "info": "https://en.wikipedia.org/wiki/Max_Romeo"
     },
     {
       "id": 3,
       "artist": "Bobby McFerrin",
       "song": "Don't worry, be happy",
-      "url": "./audio/2.3.mp3"
+      "url": "./audio/09.mp3",
+      "years": "1950 - present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Bobby_McFerrin"
     },
     {
       "id": 4,
       "artist": "Laid Back",
       "song": "Sunshine reggae",
-      "url": "./audio/2.4.mp3"
+      "url": "./audio/10.mp3",
+      "years": "1979 - present",
+      "location": "Denmark",
+      "info": "https://en.wikipedia.org/wiki/Laid_Back"
     },
     {
       "id": 5,
       "artist": "UB40",
       "song": "Kingston town",
-      "url": "./audio/2.5.mp3"
+      "url": "./audio/11.mp3",
+      "years": "1978 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/UB40"
     },
     {
       "id": 6,
       "artist": "Big Mountain",
       "song": "Baby, I love your way",
-      "url": "./audio/2.6.mp3"
+      "url": "./audio/12.mp3",
+      "years": "1988 - present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Big_Mountain_(band)"
     }
   ],
   "stage2": [
@@ -80,37 +116,55 @@
       "id": 1,
       "artist": "A-Ha",
       "song": "Stay on these roads",
-      "url": "./audio/3.1.mp3"
+      "url": "./audio/13.mp3",
+      "years": "1982 - present",
+      "location": "Norway",
+      "info": "https://en.wikipedia.org/wiki/A-ha"
     },
     {
       "id": 2,
       "artist": "Alphaville",
       "song": "Forever young",
-      "url": "./audio/3.2.mp3"
+      "url": "./audio/14.mp3",
+      "years": "1982 - present",
+      "location": "Germany",
+      "info": "https://en.wikipedia.org/wiki/Alphaville_(band)"
     },
     {
       "id": 3,
       "artist": "Duran Duran",
       "song": "Ordinary world",
-      "url": "./audio/3.3.mp3"
+      "url": "./audio/15.mp3",
+      "years": "1978 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Duran_Duran"
     },
     {
       "id": 4,
       "artist": "Tears For Fears",
       "song": "Shout",
-      "url": "./audio/3.4.mp3"
+      "url": "./audio/16.mp3",
+      "years": "1981 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Tears_for_Fears"
     },
     {
       "id": 5,
       "artist": "Pet Shop Boys",
       "song": "Domino dancing",
-      "url": "./audio/3.5.mp3"
+      "url": "./audio/17.mp3",
+      "years": "1981 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Pet_Shop_Boys"
     },
     {
       "id": 6,
       "artist": "Depeche Mode",
       "song": "Enjoy the Silence",
-      "url": "./audio/3.6.mp3"
+      "url": "./audio/18.mp3",
+      "years": "1980 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Depeche_Mode"
     }
   ],
   "stage3": [
@@ -118,37 +172,55 @@
       "id": 1,
       "artist": "Sting",
       "song": "Fields of gold",
-      "url": "./audio/4.1.mp3"
+      "url": "./audio/19.mp3",
+      "years": "1951 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Sting_(musician)"
     },
     {
       "id": 2,
       "artist": "Eric Clapton",
       "song": "Tears in Heaven",
-      "url": "./audio/4.2.mp3"
+      "url": "./audio/20.mp3",
+      "years": "1945 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Eric_Clapton"
     },
     {
       "id": 3,
       "artist": "Phil Collins",
       "song": "Can't Stop Loving You",
-      "url": "./audio/4.3.mp3"
+      "url": "./audio/21.mp3",
+      "years": "1951 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Phil_Collins"
     },
     {
       "id": 4,
       "artist": "Toto",
       "song": "Africa",
-      "url": "./audio/4.4.mp3"
+      "url": "./audio/22.mp3",
+      "years": "1977 - present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Toto_(band)"
     },
     {
       "id": 5,
       "artist": "Peter Gabriel",
       "song": "Red Rain",
-      "url": "./audio/4.5.mp3"
+      "url": "./audio/23.mp3",
+      "years": "1950 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Peter_Gabriel"
     },
     {
       "id": 6,
       "artist": "Elton John",
       "song": "Daniel",
-      "url": "./audio/4.6.mp3"
+      "url": "./audio/24.mp3",
+      "years": "1947 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Elton_John"
     }
   ],
   "stage4": [
@@ -156,37 +228,55 @@
       "id": 1,
       "artist": "Suzanne Vega",
       "song": "Tom's dinner",
-      "url": "./audio/5.1.mp3"
+      "url": "./audio/25.mp3",
+      "years": "1959 - present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Suzanne_Vega"
     },
     {
       "id": 2,
       "artist": "Vangelis",
       "song": "Chariots of fire",
-      "url": "./audio/5.2.mp3"
+      "url": "./audio/26.mp3",
+      "years": "1943 - 2022",
+      "location": "Greece",
+      "info": "https://en.wikipedia.org/wiki/Vangelis"
     },
     {
       "id": 3,
       "artist": "Sam Brown",
       "song": "Stop",
-      "url": "./audio/5.3.mp3"
+      "url": "./audio/27.mp3",
+      "years": "1964 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Sam_Brown_(singer)"
     },
     {
       "id": 4,
       "artist": "Black",
       "song": "Wonderful life",
-      "url": "./audio/5.4.mp3"
+      "url": "./audio/28.mp3",
+      "years": "1962 - 2016",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Black_(singer)"
     },
     {
       "id": 5,
       "artist": "Des'Ree",
       "song": "Life",
-      "url": "./audio/5.5.mp3"
+      "url": "./audio/29.mp3",
+      "years": "1968 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Des%27ree"
     },
     {
       "id": 6,
       "artist": "The Mama's And The Papa's",
       "song": "California Dreamin",
-      "url": "./audio/5.6.mp3"
+      "url": "./audio/30.mp3",
+      "years": "1965 - 1998",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/The_Mamas_%26_the_Papas"
     }
   ],
   "stage5": [
@@ -194,37 +284,55 @@
       "id": 1,
       "artist": "Bolland & Bolland",
       "song": "You in the army now",
-      "url": "./audio/6.1.mp3"
+      "url": "./audio/31.mp3",
+      "years": "1972 - 1998",
+      "location": "Netherlands",
+      "info": "https://en.wikipedia.org/wiki/Bolland_%26_Bolland"
     },
     {
       "id": 2,
       "artist": "The Shocking Blue",
       "song": "Venus",
-      "url": "./audio/6.2.mp3"
+      "url": "./audio/32.mp3",
+      "years": "1967 - 1974",
+      "location": "Netherlands",
+      "info": "https://en.wikipedia.org/wiki/Shocking_Blue"
     },
     {
       "id": 3,
       "artist": "Arrows",
       "song": "I love rock'n'roll",
-      "url": "./audio/6.3.mp3"
+      "url": "./audio/33.mp3",
+      "years": "1974 - 1977",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Arrows_(British_band)"
     },
     {
       "id": 4,
       "artist": "Neil Diamond",
       "song": "Girl, you'll be a woman soon",
-      "url": "./audio/6.4.mp3"
+      "url": "./audio/34.mp3",
+      "years": "1962 - present",
+      "location": "USA",
+      "info": "https://en.wikipedia.org/wiki/Neil_Diamond"
     },
     {
       "id": 5,
       "artist": "Rick Astley",
       "song": "Never Gonna Give You Up",
-      "url": "./audio/6.5.mp3"
+      "url": "./audio/35.mp3",
+      "years": "1985 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Rick_Astley"
     },
     {
       "id": 6,
       "artist": "Whitesnake",
       "song": "Is this love",
-      "url": "./audio/6.6.mp3"
+      "url": "./audio/36.mp3",
+      "years": "1978 - present",
+      "location": "England",
+      "info": "https://en.wikipedia.org/wiki/Whitesnake"
     }
   ]
 }

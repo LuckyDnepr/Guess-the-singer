@@ -13,8 +13,19 @@ body.addEventListener("mousemove", function (e) {
 
 async function quizzPageStart () {
   globalThis.data = await getData(dataPath);
-  renderQuizzPage(main);
+  globalThis.songs = generateSolver();
+  renderQuizzPage(main, 0);
+}
 
+function generateSolver () {
+  const data = globalThis.data;
+  let questions = [];
+  for (const key of Object.keys(data)) {
+    const stage = data[key];
+    const index = Math.floor(Math.random()*stage.length);
+    questions.push(data[key][index]);
+  }
+  return questions;
 }
 
 async function getData(path) {

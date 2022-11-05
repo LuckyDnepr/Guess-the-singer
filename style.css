@@ -79,8 +79,8 @@
   padding: 0 20px;
   margin-top: 2rem;
   height: 100%;
-  grid-template-columns: 25% auto 25%;
-  grid-template-rows: 4rem 16rem 2rem;
+  grid-template-columns: 25% auto 20%;
+  grid-template-rows: 4rem 16rem 3rem;
   justify-items: center;
   align-items: flex-start;
   grid-template-areas: "quizzstatus quizzstatus quizzstatus" "selectanswer player artistinfo" "nextstage nextstage nextstage"; }
@@ -126,7 +126,10 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 0 0.2rem; }
+  padding: 0 0.2rem;
+  transition: opacity ease-in 300ms; }
+  .select-answer.fade {
+    opacity: 0; }
   .select-answer .answer-selection {
     display: flex;
     flex-direction: column;
@@ -170,7 +173,10 @@
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  transition: opacity ease-in 300ms; }
+  .player.fade {
+    opacity: 0; }
   .player__info {
     height: calc(100% - 3rem);
     display: flex;
@@ -196,6 +202,8 @@
         font-size: 1.2rem; }
       .player__info__text__years {
         font-size: 1rem; }
+        .player__info__text__years.unknown-sign {
+          font-size: 3rem; }
       .player__info__text__song {
         margin: 1rem 0;
         font-size: 1.2rem; }
@@ -314,7 +322,10 @@
 .artist-info {
   grid-area: artistinfo;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  transition: opacity ease-in 300ms; }
+  .artist-info.fade {
+    opacity: 0; }
   .artist-info__main {
     display: flex;
     flex-direction: column;
@@ -342,9 +353,9 @@
 .next-stage {
   grid-area: nextstage;
   width: 100%;
-  height: 100%;
+  height: 75%;
   padding: 0 3px;
-  margin-top: 1rem; }
+  align-self: flex-end; }
   .next-stage__button {
     color: white;
     font-family: Trispace, "Courier New", Courier, monospace;
